@@ -45,7 +45,7 @@
         <div class="profile-stats">
             <div class="stat-card">
                 <h3>Total Spent</h3>
-                <p>₹{{ "%.2f"|format(stats.total) }}</p>
+                <p>₹{{ "%.2f"|format(stats.total|float) }}</p>
             </div>
             <div class="stat-card">
                 <h3>Transactions</h3>
@@ -79,7 +79,7 @@
                             <td>{{ tx.date }}</td>
                             <td>{{ tx.description }}</td>
                             <td><span class="cat-badge cat-badge--{{ tx.category | lower }}">{{ tx.category }}</span></td>
-                            <td>₹{{ "%.2f"|format(tx.amount ) }}</td>
+                            <td>₹{{ "%.2f"|format(tx.amount|float) }}</td>
                             <td class="tx-actions">
                                 <a href="{{ url_for('edit_expense', id=tx.id) }}" class="btn-ghost">Edit</a>
                                 <form method="POST" action="{{ url_for('delete_expense', id=tx.id) }}" style="display:inline;" onsubmit="return confirm('Delete this expense?');">
@@ -102,7 +102,7 @@
                     {% for cat in categories %}
                     <div class="cat-row">
                         <span class="cat-name">{{ cat.name }}</span>
-                        <span class="cat-amount">₹{{ "%.2f"|format(cat.amount) }}</span>
+                        <span class="cat-amount">₹{{ "%.2f"|format(cat.amount|float) }}</span>
                         <div class="cat-bar-container">
                             <div class="cat-bar" style="width: {{ cat.percent }}%; background: var(--accent);"></div>
                         </div>
