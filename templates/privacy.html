@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy — Spendly{% endblock %}
+
+{% block content %}
+<section class="legal-page">
+    <div class="legal-inner">
+        <header class="legal-header">
+            <p class="legal-eyebrow">Legal</p>
+            <h1 class="legal-title">Privacy Policy</h1>
+            <p class="legal-updated">Last updated: June 11, 2026</p>
+        </header>
+
+        <p class="legal-intro">
+            Your privacy matters to us. This Privacy Policy explains what
+            information Spendly collects, how we use it, and the choices
+            you have. Spendly is a personal expense tracking tool, and we
+            are committed to handling your data responsibly and
+            transparently.
+        </p>
+
+        <section class="legal-section">
+            <h2 class="legal-section-title">1. Data We Collect</h2>
+            <p>
+                When you create an account, we collect the information
+                you provide directly: your name, email address, and a
+                password (stored as a one-way hash, never in plain text).
+            </p>
+            <p>
+                As you use Spendly, we collect the expense data you
+                choose to record — including the amount, category, date,
+                and any description you add. We also store basic
+                technical information such as the timestamps of your
+                activity, solely to operate and secure the service.
+            </p>
+        </section>
+
+        <section class="legal-section">
+            <h2 class="legal-section-title">2. How We Use Your Data</h2>
+            <p>
+                We use the data you provide only to deliver and improve
+                Spendly. Specifically, we use it to authenticate your
+                account, store and display your transactions, generate
+                summaries and category breakdowns, and respond to support
+                requests.
+            </p>
+            <p>
+                We do not use your data for advertising, and we do not
+                build advertising profiles of any kind.
+            </p>
+        </section>
+
+        <section class="legal-section">
+            <h2 class="legal-section-title">3. Data Storage</h2>
+            <p>
+                Your data is stored securely and is associated with your
+                account only. We take reasonable technical and
+                organisational measures to protect your information
+                against unauthorised access, loss, or misuse.
+            </p>
+            <p>
+                You may update or correct your personal information at
+                any time through the application, and you may delete
+                individual expenses or your entire account by contacting
+                us. When you request account deletion, we will remove
+                your personal data within a reasonable timeframe, except
+                where retention is required by law.
+            </p>
+        </section>
+
+        <section class="legal-section">
+            <h2 class="legal-section-title">4. Third Party Services</h2>
+            <p>
+                Spendly relies on a small set of trusted third-party
+                services to operate — for example, hosting providers that
+                store the database, and (where applicable) email
+                services that deliver transactional messages such as
+                account verification.
+            </p>
+            <p>
+                These providers receive only the information needed to
+                perform their function and are expected to handle it
+                securely. We do not sell, rent, or trade your personal
+                data with third parties for their own purposes.
+            </p>
+        </section>
+
+        <section class="legal-section">
+            <h2 class="legal-section-title">5. Contact Us</h2>
+            <p>
+                If you have any questions about this Privacy Policy, want
+                to request access to or deletion of your data, or have a
+                concern about how your information is handled, please
+                reach out to us through the contact information
+                provided in the application.
+            </p>
+            <p>
+                We will respond to privacy-related requests in a timely
+                and transparent manner.
+            </p>
+        </section>
+
+        <div class="legal-back">
+            <a href="{{ url_for('landing') }}" class="hero-v2-btn">← Back to home</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
