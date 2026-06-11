@@ -70,6 +70,11 @@ def landing():
     return render_template("landing.html")
 
 
+@app.route("/terms")
+def terms():
+    return render_template("terms.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if session.get("user_id"):
@@ -125,14 +130,9 @@ def login():
 # ------------------------------------------------------------------ #
 
 
-@app.route("/terms")
-def terms():
-    return render_template("terms.html")
 
 
-@app.route("/privacy")
-def privacy():
-    return render_template("privacy.html")
+
 
 
 @app.route("/logout")
