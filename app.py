@@ -242,7 +242,11 @@ def add_expense():
         return redirect(url_for("profile"))
 
     return render_template(
-        "add_expense.html", categories=CATEGORIES, form={}, today=today
+        "add_expense.html",
+        categories=CATEGORIES,
+        form={},
+        today=today
+
     )
 
 
